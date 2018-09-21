@@ -102,7 +102,7 @@ class Account(MPTTModel):
         db_index=True,
         on_delete=models.CASCADE,
     )
-    code = models.CharField(max_length=3, null=True, blank=True)
+    code = models.CharField(max_length=100, null=True, blank=True)
     full_code = models.CharField(max_length=100, db_index=True, unique=True, null=True, blank=True)
     # TODO: Implement this child_code_width field, as it is probably a good idea
     # child_code_width = models.PositiveSmallIntegerField(default=1)
